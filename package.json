@@ -1,0 +1,65 @@
+{
+  "name": "pantone-colors-api",
+  "version": "1.0.0",
+  "description": "A web API that serves PANTONE® color data.",
+  "keywords": [
+    "pantone",
+    "colors",
+    "api"
+  ],
+  "homepage": "https://github.com/ksergenozel/pantone-colors-api#readme",
+  "bugs": {
+    "url": "https://github.com/ksergenozel/pantone-colors-api/issues"
+  },
+  "license": "MIT",
+  "author": "ksergenozel <ksergenozel@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksergenozel/pantone-colors-api.git"
+  },
+  "main": "dist/server.js",
+  "type": "module",
+  "imports": {
+    "#*": "./src/*"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{json,yml,yaml,md}": [
+      "prettier --check"
+    ]
+  },
+  "scripts": {
+    "dev": "tsx --watch --env-file .env src/server.ts",
+    "start": "node --env-file .env dist/server.js",
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"ERROR: No test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.17",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0"
+  }
+}
