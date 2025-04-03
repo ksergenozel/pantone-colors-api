@@ -1,14 +1,15 @@
 import express from "express";
+import { env } from "./config/env.js";
+import router from "#routes.js";
 
 const app = express();
-const port = process.env.PORT;
+const port = env.PORT;
 
-app.get("/", (_, res) => {
-  res.status(200).json({
-    message: "Hello, World!",
-  });
-});
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use("/api", router);
 
 app.listen(port, () => {
-  console.log("INFO: Server is running on port:", port);
+  console.log(`Server running on port ${port}`);
 });
