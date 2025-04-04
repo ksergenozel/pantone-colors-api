@@ -44,12 +44,14 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "better-sqlite3": "^11.9.1"
+    "better-sqlite3": "^11.9.1",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
     "@tsconfig/node22": "^22.0.1",
     "@types/better-sqlite3": "^7.6.12",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
     "@types/node": "^22.13.17",
     "cross-env": "^7.0.3",
