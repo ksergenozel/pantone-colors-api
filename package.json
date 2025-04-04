@@ -1,7 +1,7 @@
 {
   "name": "pantone-colors-api",
   "version": "1.0.0",
-  "description": "A web API that serves PANTONE® color data.",
+  "description": "A web API that serves PANTONE color data.",
   "keywords": [
     "pantone",
     "colors",

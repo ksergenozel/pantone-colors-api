@@ -1,9 +1,9 @@
-# PANTONE&reg; Colors API
+# PANTONE Colors API
 
-A web API that serves PANTONE® color data.
+A web API that serves PANTONE color data.
 
 > **Disclaimer:**
-> This project is intended for non-commercial use only and is not associated with PANTONE&reg;.
+> This project is intended for non-commercial use only and is not associated with PANTONE.
 
 ## License
 
