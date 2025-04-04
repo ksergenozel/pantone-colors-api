@@ -1,5 +1,8 @@
 import { Request, Response, RequestHandler } from "express";
-import { getColors as getColorsFromService, getTotalColorCount } from "./service.js";
+import {
+  getColors as getColorsFromService,
+  getTotalColorCount,
+} from "./service.js";
 
 export const getColors: RequestHandler = (req: Request, res: Response) => {
   try {

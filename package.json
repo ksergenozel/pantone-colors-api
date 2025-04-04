@@ -13,23 +13,14 @@
   },
   "license": "MIT",
   "author": "ksergenozel <ksergenozel@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ksergenozel/pantone-colors-api.git"
-  },
   "main": "dist/server.js",
   "type": "module",
   "imports": {
     "#*": "./src/*"
   },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "eslint",
-      "prettier --check"
-    ],
-    "*.{json,yml,yaml,md}": [
-      "prettier --check"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksergenozel/pantone-colors-api.git"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development tsx --watch --env-file .env src/server.ts",
@@ -42,6 +33,15 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{json,yml,yaml,md}": [
+      "prettier --check"
+    ]
   },
   "dependencies": {
     "better-sqlite3": "^11.9.1",

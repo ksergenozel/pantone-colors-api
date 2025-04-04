@@ -5,7 +5,9 @@ import fs from "fs";
 const dbPath = path.resolve(process.cwd(), "pantone.db");
 
 if (!fs.existsSync(dbPath)) {
-  throw new Error("pantone.db not found. Please add it to the project root directory.");
+  throw new Error(
+    "pantone.db not found. Please add it to the project root directory.",
+  );
 }
 
 let db: Database.Database;
