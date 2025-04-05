@@ -47,11 +47,21 @@ npm install
 
 ## Usage
 
+Development:
+
 ```bash
 npm run dev
 ```
 
-> This script creates `data.json`, `data.csv` and `pantone.db` files in the root directory.
+Production:
+
+```bash
+npm run build
+```
+
+```bash
+npm start
+```
 
 ## License
 
