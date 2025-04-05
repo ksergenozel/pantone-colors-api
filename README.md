@@ -7,11 +7,11 @@ A web API that serves PANTONE color data.
 
 ## Motivation
 
-After building [PANTONE Colors Scraper](https://github.com/ksergenozel/pantone-colors-scraper) — a web scraper that collects PANTONE color data and stores it in a SQLite database — I wanted to make this data available through an API.
+After building [PANTONE Colors Scraper](https://github.com/ksergenozel/pantone-colors-scraper), a web scraper that collects PANTONE color data, I wanted to serve this data through an API.
 
 ## Features
 
-This API serves PANTONE color data from SQLite database with pagination and search support.
+This API serves PANTONE color data from a SQLite database with pagination and search support.
 
 ## Tech Stack
 
@@ -19,7 +19,6 @@ This API serves PANTONE color data from SQLite database with pagination and sear
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
 - [SQLite](https://www.sqlite.org/)
-- [better-sqlite3](https://github.com/WiseLibs/better-sqlite3/)
 
 ## Requirements
 
@@ -45,6 +44,22 @@ Install dependencies:
 npm install
 ```
 
+Create `.env` file from `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+Configure environment variables:
+
+```bash
+PORT=3000
+```
+
+Obtain `pantone.db` and place it under the project's root:
+
+> To generate the database, clone the [PANTONE Colors Scraper](https://github.com/ksergenozel/pantone-colors-scraper) project and run it.
+
 ## Usage
 
 Development:
@@ -61,6 +76,53 @@ npm run build
 
 ```bash
 npm start
+```
+
+## API Reference
+
+### Get Colors
+
+```http
+GET /api/colors
+```
+
+### Query Parameters
+
+| Parameter | Type   | Required | Description                                        |
+| --------- | ------ | -------- | -------------------------------------------------- |
+| `page`    | number | ✘        | Page number (default: 1)                           |
+| `limit`   | number | ✘        | Number of colors per page (default: 100, max: 100) |
+| `search`  | string | ✘        | Filters by `code` or `name`                        |
+
+### Response
+
+```json
+{
+  "page": 1,
+  "limit": 100,
+  "count": 100,
+  "total": 27688,
+  "totalPages": 277,
+  "hasNextPage": true,
+  "hasPrevPage": false,
+  "nextPage": 2,
+  "prevPage": null,
+  "data": [
+    {
+      "code": "17-1230 TCX",
+      "name": "Mocha Mousse",
+      "collection": "Fashion & Interior Designers",
+      "hex": "#A47864",
+      "r": 164,
+      "g": 120,
+      "b": 100,
+      "c": 0,
+      "m": 27,
+      "y": 39,
+      "k": 36
+    }
+  ]
+}
 ```
 
 ## License
