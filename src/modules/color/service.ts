@@ -1,4 +1,4 @@
-import { db } from "#config/db.js";
+import { db } from "../../config/db.js";
 import { Color } from "./model.js";
 
 export const getColors = (limit: number = 100, offset: number = 0): Color[] => {

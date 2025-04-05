@@ -1,9 +1,9 @@
 import express from "express";
-import { env } from "#config/env.js";
-import router from "#routes.js";
+import { env } from "./config/env.js";
+import router from "./routes.js";
 import cors from "cors";
-import { rateLimtier } from "#middlewares/rateLimiter.js";
-import { simpleLogger } from "#middlewares/simpleLogger.js";
+import { rateLimtier } from "./middlewares/rateLimiter.js";
+import { simpleLogger } from "./middlewares/simpleLogger.js";
 import helmet from "helmet";
 
 const app = express();

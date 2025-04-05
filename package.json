@@ -15,9 +15,6 @@
   "author": "ksergenozel <ksergenozel@gmail.com>",
   "main": "dist/server.js",
   "type": "module",
-  "imports": {
-    "#*": "./src/*"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ksergenozel/pantone-colors-api.git"

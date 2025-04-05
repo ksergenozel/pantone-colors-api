@@ -1,5 +1,5 @@
 import { Router } from "express";
-import colorRoutes from "#modules/color/routes.js";
+import colorRoutes from "./modules/color/routes.js";
 
 const router = Router();
 
